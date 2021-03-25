@@ -1,1 +1,24 @@
 <div class="card highlight-card">Project Tracker</div>
+<div class="card-container">
+  <div *ngFor="let project of projects" class="card" (click)="onSelect(project)">
+    {{project.name}}
+  </div>
+</div>
+
+<section *ngIf="selectedProject">
+  <h2>Project Details</h2>
+  <fieldset>
+    <label class="lbl">Id:</label>
+    <input [(ngModel)]="selectedProject.id"/>
+  </fieldset>
+  <fieldset>
+    <label class="lbl">Name:</label>
+    <input [(ngModel)]="selectedProject.name"/>
+  </fieldset>
+  <fieldset>
+    <label class="lbl">Course:</label>
+    <input [(ngModel)]="selectedProject.course" />
+  </fieldset>
+  <button (click)="onSelect(null)" class="btn">Hide/Reset</button>
+</section>
+

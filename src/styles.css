@@ -293,4 +293,21 @@ svg#clouds {
     visibility: hidden;
   }
 }
+
+
+.lbl {
+  width: 75px;
+  display: inline-block;
+}
+
+fieldset {
+  border: none;
+}
+
+.btn {
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+  padding: 10px;
+}
 /* You can add global styles to this file, and also import other style files */
